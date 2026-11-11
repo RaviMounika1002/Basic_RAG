@@ -1,0 +1,23 @@
+Retrieval-Augmented Generation (RAG)
+RAG is a technique that combines information retrieval with language model generation. Instead of relying only on the knowledge stored in model parameters, RAG retrieves relevant information from an external knowledge base and supplies it to the language model as context.
+
+Embeddings
+Embeddings are numerical vector representations of text. Text with similar semantic meaning tends to have similar vector representations. Embedding models are useful for semantic search, clustering, recommendation systems, and document retrieval.
+
+Chunking
+Chunking divides large documents into smaller passages. Good chunking preserves meaningful context while keeping each passage small enough for retrieval and model processing. Chunk overlap can help preserve information across boundaries.
+
+Cosine Similarity
+Cosine similarity measures the directional similarity between two vectors. When vectors are normalized to unit length, their dot product equals cosine similarity. It is commonly used to rank semantic search results.
+
+Vector Databases
+Vector databases store and index embeddings to support efficient similarity searches. Examples include FAISS, Qdrant, Milvus, and Chroma. For small collections, an in-memory NumPy array can be sufficient.
+
+Reranking
+Reranking is a second-stage retrieval process. An initial retriever finds candidate documents, and a reranking model evaluates their relevance to the query more precisely. Reranking can improve retrieval quality at the cost of additional latency.
+
+Hallucination
+A hallucination occurs when a language model generates information that is incorrect or unsupported. RAG can reduce unsupported answers by providing relevant evidence, but retrieval alone does not guarantee factual correctness.
+
+RAG Evaluation
+RAG systems can be evaluated at the retrieval and generation stages. Retrieval metrics include Recall at K, Precision at K, and Mean Reciprocal Rank. Generation metrics include answer relevance, faithfulness, and citation accuracy.
