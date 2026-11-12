@@ -1,12 +1,12 @@
-
 # Python
 .venv/
 __pycache__/
 *.pyc
 
-# Secrets
+# Credentials
 .env
 .env.*
+**/.streamlit/secrets.toml
 
-# Mac
+# OS
 .DS_Store
